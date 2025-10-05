@@ -2,7 +2,7 @@
 
 Script that prepares a PiKVM for the official OLED panel: it enables the I²C bus, installs the required tooling, and activates the kvmd OLED service units.
 
-Source repository: <https://github.com/nyok1912/PiKVM-Scripts/tree/main/zerotier/oled>
+Source repository: <https://github.com/nyok1912/PiKVM-Scripts/tree/main/oled>
 
 ## What the script handles for you
 
@@ -11,14 +11,14 @@ Source repository: <https://github.com/nyok1912/PiKVM-Scripts/tree/main/zerotier
 - Installs `i2c-tools` (skips the step when it is already present).
 - Enables and starts `kvmd-oled`, `kvmd-oled-reboot`, and `kvmd-oled-shutdown`.
 - Switches the root filesystem to read/write during the run and safely back to read-only at the end.
-- Offers to run `pikvm-update` before doing anything else, mirroring the ZeroTier setup workflow.
+- Offers to run `pikvm-update` before doing anything else.
 
 ## Ways to run it
 
 ### 1. Download first
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nyok1912/PiKVM-Scripts/main/zerotier/oled/setup.sh -o setup.sh
+curl -fsSL https://raw.githubusercontent.com/nyok1912/PiKVM-Scripts/main/oled/setup.sh -o setup.sh
 chmod +x setup.sh
 sudo ./setup.sh
 ```
@@ -28,7 +28,7 @@ You will be asked whether to run `pikvm-update` and whether to reboot after the 
 ### 2. Stream it
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nyok1912/PiKVM-Scripts/main/zerotier/oled/setup.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/nyok1912/PiKVM-Scripts/main/oled/setup.sh | sudo bash
 ```
 
 Same experience as the local download, without keeping the file on disk.
