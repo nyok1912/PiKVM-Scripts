@@ -1,5 +1,7 @@
 # PiKVM OLED Setup
 
+> **Heads up:** If you own a PiKVM V3 HAT BOX, you can skip this script entirely and flash the preconfigured image with OLED / fan support baked in: <https://files.pikvm.org/images/v3-hdmi-rpi4/aarch64/v3-hdmi-rpi4-aarch64-box-latest.img.xz>. For other models, check the full catalog of official images at <https://docs.pikvm.org/flashing_os/>.
+
 Script that prepares a PiKVM for the official OLED panel: it enables the I²C bus, installs the required tooling, and activates the kvmd OLED service units.
 
 Source repository: <https://github.com/nyok1912/PiKVM-Scripts/tree/main/oled>
@@ -48,3 +50,4 @@ systemctl status kvmd-oled.service
 journalctl -u kvmd-oled.service -f
 i2cdetect -y 1
 ```
+
